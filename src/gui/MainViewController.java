@@ -78,33 +78,5 @@ public class MainViewController implements Initializable {
 			Alerts.showAlert("IOException", "Error loading view", e.getMessage(), AlertType.ERROR);
 		}
 	}
-	
-	/*
-	private synchronized void loadView2(String absoluteName) {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
-			VBox newVBox = loader.load();
 			
-			Scene mainScene = Main.getMainScene();
-			
-			//Pegar Referencia para o VBox da Janela Principal
-			VBox mainVBox = (VBox) ((ScrollPane) mainScene.getRoot()).getContent(); 
-		
-			Node mainMenu = mainVBox.getChildren().get(0);
-			//Limpa todos os filhos do mainVBox
-			mainVBox.getChildren().clear();
-			
-			mainVBox.getChildren().add(mainMenu);
-			mainVBox.getChildren().addAll(newVBox.getChildren());		
-			
-			DepartmentListController controller = loader.getController();
-			controller.setDepartmentService(new DepartmentService());
-			controller.updateTableView();			
-		}
-		catch (IOException e) {
-			Alerts.showAlert("IOException", "Error loading view", e.getMessage(), AlertType.ERROR);
-		}
-	}
-	*/
-		
 }
